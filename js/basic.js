@@ -25,7 +25,7 @@ window.onload = function () {
     direction = document.getElementById("direction");
 
 {
-	var q = window.prompt("Could not discover your location. What is your city name?");
+	var q = window.prompt("Enter a city name?");
 	updateByZip(q);
     }
 
