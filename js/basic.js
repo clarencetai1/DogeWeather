@@ -7,12 +7,13 @@ var wind;
 var direction;
 
 function update(weather) {
-    icon.src = "imgs/codes/" + weather.code + ".png"
     humidity.innerHTML = weather.humidity;
     wind.innerHtml = weather.wind;
     direction.innerHTML = weather.direction;
     loc.innerHTML = weather.location;
     temp.innerHTML = weather.temp;
+    icon.src = "imgs/codes/" + weather.code + ".png"
+    console.log(icon.src)
 }
 
 window.onload = function () {
@@ -23,18 +24,19 @@ window.onload = function () {
     wind = document.getElementById("wind");
     direction = document.getElementById("direction");
 
- 
+
     if(navigator.geolocation){
 	var showPosition = function(position){
 	    updateByGeo(position.coords.latitude, position.coords.longitude);
 	}
 	navigator.geolocation.getCurrentPosition(showPosition);
     } else {
-	var zip = window.prompt("Could not discover your location. What is your zip code?");
-	updateByZip(zip);
+	var q = window.prompt("Could not discover your location. What is your city name?");
+	updateByZip(q);
     }
 
 }
+
 
 function updateByGeo(lat, lon){
     var url = "http://api.openweathermap.org/data/2.5/weather?" +
@@ -45,9 +47,9 @@ function updateByGeo(lat, lon){
 }
 
 
-function updateByZip(zip){
+function updateByZip(q){
     var url = "http://api.openweathermap.org/data/2.5/weather?" +
-	"zip=" + zip +
+	"q=" + q +
 	"&APPID=" + APPID;
     sendRequest(url);
 }
@@ -91,10 +93,6 @@ function degreesToDirection(degrees){
     }
     return "N";
     
-}
-
-function K2F(k){
-    return Math.round(k*(9/5)-459.67);
 }
 
 function K2C(k){

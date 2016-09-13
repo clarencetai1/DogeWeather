@@ -76,7 +76,7 @@ body #page-container {
 }
 
 .top img {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .bottom {
@@ -91,9 +91,12 @@ body #page-container {
 }
 
 .wind {
-    padding: 5px;
+    padding: 5 px;
 }
 
-
+.fb-comments {
+    background: lightblue;
+    float:right;
+}
 
 
