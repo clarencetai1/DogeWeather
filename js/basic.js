@@ -24,14 +24,11 @@ window.onload = function () {
     wind = document.getElementById("wind");
     direction = document.getElementById("direction");
 
-try {
-    var q = window.prompt("What is the city name?");
+
+	var q = window.prompt("What is the city's name?");
 	updateByZip(q);
-}
-catch(err) {
-    var q = window.prompt("Could not discover your location. Retype city name?");
-	updateByZip(q);
-}
+    }
+
 
 
 function updateByGeo(lat, lon){

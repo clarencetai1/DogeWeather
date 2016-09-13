@@ -12,7 +12,8 @@ body {
 }
 
 h1#app-name {
-        font-size:84px;
+    font-family: "Times New Roman", Georgia, Serif;
+    font-size:84px;
 }
 
 h2#page-header {
