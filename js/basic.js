@@ -24,8 +24,12 @@ window.onload = function () {
     wind = document.getElementById("wind");
     direction = document.getElementById("direction");
 
-{
-	var q = window.prompt("Enter a city name?");
+
+    if(navigator.geolocation){
+	var q = window.prompt("what is your city name?");
+	updateByZip(q);
+    } else {
+	var q = window.prompt("Could not discover your location. Retype city name?");
 	updateByZip(q);
     }
 
