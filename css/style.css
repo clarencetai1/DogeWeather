@@ -12,7 +12,7 @@ body {
 }
 
 h1#app-name {
-    font-family: "Brush Script MT",cursive;
+    font-family: "Times New Roman", Georgia, Serif;
     font-size:84px;
 }
 
@@ -76,7 +76,7 @@ body #page-container {
 }
 
 .top img {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .bottom {
