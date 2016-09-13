@@ -24,15 +24,13 @@ window.onload = function () {
     wind = document.getElementById("wind");
     direction = document.getElementById("direction");
 
-
-    if(navigator.geolocation){
-	var q = window.prompt("what is your city name?");
+try {
+    var q = window.prompt("What is the city name?");
 	updateByZip(q);
-    } else {
-	var q = window.prompt("Could not discover your location. Retype city name?");
+}
+catch(err) {
+    var q = window.prompt("Could not discover your location. Retype city name?");
 	updateByZip(q);
-    }
-
 }
 
 
