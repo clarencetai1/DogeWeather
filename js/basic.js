@@ -24,13 +24,7 @@ window.onload = function () {
     wind = document.getElementById("wind");
     direction = document.getElementById("direction");
 
-
-    if(navigator.geolocation){
-	var showPosition = function(position){
-	    updateByGeo(position.coords.latitude, position.coords.longitude);
-	}
-	navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
+{
 	var q = window.prompt("Could not discover your location. What is your city name?");
 	updateByZip(q);
     }
