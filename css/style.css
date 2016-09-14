@@ -107,6 +107,8 @@ body #page-container {
     background:transparent;
     overflow: scroll;
     color: whitesmoke;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 
