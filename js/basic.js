@@ -3,12 +3,12 @@ var temp;
 var loc;
 var icon;
 var humidity;
-
+var wind;
 var direction;
 
 function update(weather) {
     humidity.innerHTML = weather.humidity;
-
+    wind.innerHTML = weather.wind;
     direction.innerHTML = weather.direction;
     loc.innerHTML = weather.location;
     temp.innerHTML = weather.temp;
@@ -21,7 +21,7 @@ window.onload = function () {
     loc = document.getElementById("location");
     icon = document.getElementById("icon");
     humidity = document.getElementById("humidity");
-
+    wind = document.getElementById("wind")
     direction = document.getElementById("direction");
 
 
@@ -55,7 +55,7 @@ function sendRequest(url){
 	    var weather = {};
 	    weather.icon = data.weather[0].id;
 	    weather.humidity = data.main.humidity;
-
+        weather.wind = data.wind.speed;
 
 	    weather.direction = degreesToDirection(data.wind.deg)
 	    weather.location = data.name;

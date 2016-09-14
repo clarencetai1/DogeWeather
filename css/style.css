@@ -79,7 +79,8 @@ body #page-container {
 }
 
 .top img {
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 0px;
 }
 
 .bottom {
@@ -90,13 +91,17 @@ body #page-container {
 }
 
 .humidity {
-    padding: 5px;
+    margin-top:0px;
     background: transparent;
+    font-size:15px;
+}
+
+.direction {
+    font-size:11px;
 }
 
 .wind {
-    padding: 5 px;
-    font-size:11px;
+    font-size:12px;
 }
 
 .fb-comments {
