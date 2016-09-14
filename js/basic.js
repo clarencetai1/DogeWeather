@@ -25,10 +25,9 @@ window.onload = function () {
     direction = document.getElementById("direction");
 
 
-	var q = window.prompt("What is the city's name?");
+	var q = window.prompt("Could not discover your location. What is your city name?");
 	updateByZip(q);
     }
-
 
 
 function updateByGeo(lat, lon){
