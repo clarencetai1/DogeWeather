@@ -91,6 +91,7 @@ body #page-container {
 
 .humidity {
     padding: 5px;
+    background: transparent;
 }
 
 .wind {
