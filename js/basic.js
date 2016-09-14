@@ -12,7 +12,7 @@ function update(weather) {
     direction.innerHTML = weather.direction;
     loc.innerHTML = weather.location;
     temp.innerHTML = weather.temp;
-    icon.src = "imgs/codes/" + weather.code + ".png"
+    icon.src = "imgs/codes/" + weather.icon + ".png"
     console.log(icon.src)
 }
 
@@ -25,7 +25,7 @@ window.onload = function () {
     direction = document.getElementById("direction");
 
 
-	var q = window.prompt("Could not discover your location. What is your city name?");
+	var q = window.prompt("What is the city's name?");
 	updateByZip(q);
     }
 
@@ -53,7 +53,7 @@ function sendRequest(url){
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var data = JSON.parse(xmlhttp.responseText);
 	    var weather = {};
-	    weather.code = data.weather[0].id;
+	    weather.icon = data.weather[0].id;
 	    weather.humidity = data.main.humidity;
 	    weather.wind = data.wind.speed;
 
