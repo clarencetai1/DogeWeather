@@ -14,11 +14,11 @@ body {
 h1#app-name {
     font-family: "Times New Roman", Georgia, Serif;
     font-size:84px;
-    margin-top:auto;
+    margin-top:0px;
 }
 
 h2#page-header {
-    padding-top:5px;
+    padding-top:1px;
     padding-bottom:5px;
 }
 h3#refresh {
