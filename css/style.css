@@ -14,17 +14,21 @@ body {
 h1#app-name {
     font-family: "Times New Roman", Georgia, Serif;
     font-size:84px;
+    margin-top:auto;
 }
 
 h2#page-header {
-    padding-top:20px;
-    padding-bottom:20px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+h3#refresh {
+    font-size:12px
 }
 
 body #page-container {
-    margin-top: 50px;
+    margin-top: 5px;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .weather-app {
@@ -33,7 +37,6 @@ body #page-container {
     height: 160px;
     border: 1px solid whitesmoke;
     border-radius: 20px;
-    box-shadow: 10px 10px 50px transparent;
     overflow: hidden;
     text-align:center;
     font-family: "Mono";
@@ -95,14 +98,14 @@ body #page-container {
 }
 
 .fb-comments {
-    width: 400px;
-    height: 300px;
+    width: 408px;
+    height: 250px;
     border: 1px solid whitesmoke;
     border-block-end: 1px;
     background:transparent;
-    margin-top: 80px;
+    margin-top: 30px;
+    margin-left:335px;
     overflow: scroll;
-    float:center;
     color: whitesmoke;
 }
 
