@@ -5,6 +5,7 @@ var icon;
 var humidity;
 var wind;
 var direction;
+var country;
 
 function update(weather) {
     humidity.innerHTML = weather.humidity;
@@ -13,7 +14,7 @@ function update(weather) {
     loc.innerHTML = weather.location;
     temp.innerHTML = weather.temp;
     icon.src = "imgs/codes/" + weather.icon + ".png"
-    console.log(icon.src)
+    country.innerHTML = weather.country;
 }
 
 window.onload = function () {
@@ -23,7 +24,7 @@ window.onload = function () {
     humidity = document.getElementById("humidity");
     wind = document.getElementById("wind")
     direction = document.getElementById("direction");
-
+    country = document.getElementById("country")
 
 	var q = window.prompt("What is the city's name?");
 	updateByZip(q);
@@ -56,6 +57,7 @@ function sendRequest(url){
 	    weather.icon = data.weather[0].id;
 	    weather.humidity = data.main.humidity;
         weather.wind = data.wind.speed;
+        weather.country = data.sys.country;
 
 	    weather.direction = degreesToDirection(data.wind.deg)
 	    weather.location = data.name;
