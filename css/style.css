@@ -1,5 +1,5 @@
 html { 
-    background: url("https://photosbybishop.files.wordpress.com/2013/06/jbd_4266.jpg") top right no-repeat; background-attachment:fixed;
+    background: url("https://photosbybishop.files.wordpress.com/2013/06/jbd_4266.jpg") no-repeat center center fixed; position:fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
