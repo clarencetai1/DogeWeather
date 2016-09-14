@@ -112,9 +112,9 @@ body #page-container {
 
 .fb-comments {
     display:block;
-    margin-top:10px;
+    margin-top:100px;
     width: 600px;
-    height: 250px;
+    height: 350px;
     border: 1px solid whitesmoke;
     border-block-end: 1px;
     background:transparent;
