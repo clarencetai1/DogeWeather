@@ -1,11 +1,12 @@
 var APPID = "846fd88591fcaf33ab0a8874cffa1a16";
-var temp : any;
+var temp;
 var loc;
 var icon;
 var humidity;
 var wind;
 var direction;
 var country;
+var i;
 
 function update(weather) : void {
     humidity.innerHTML = weather.humidity;
@@ -71,16 +72,14 @@ function sendRequest(url) : void{
     xmlhttp.send();    
 }
 
-function degreesToDirection(degrees) : string{
+function degreesToDirection(degrees) : any{
     var range = 360/16;
     var low = 360 - range/2;
     var high = (low + range) % 360;
     var angles = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     for( i in angles ) {
 	if(degrees >= low && degrees < high){
-	    console.log(angles[i]);
 	    return angles[i];
-	    console.log("derp");
 	}
 	low = (low + range) % 360;
 	high = (high + range) % 360;

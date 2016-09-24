@@ -6,6 +6,7 @@ var humidity;
 var wind;
 var direction;
 var country;
+var i;
 function update(weather) {
     humidity.innerHTML = weather.humidity;
     wind.innerHTML = weather.wind;
@@ -65,9 +66,7 @@ function degreesToDirection(degrees) {
     var angles = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
     for (i in angles) {
         if (degrees >= low && degrees < high) {
-            console.log(angles[i]);
             return angles[i];
-            console.log("derp");
         }
         low = (low + range) % 360;
         high = (high + range) % 360;
