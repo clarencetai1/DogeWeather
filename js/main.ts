@@ -1,12 +1,12 @@
 var APPID = "846fd88591fcaf33ab0a8874cffa1a16";
-var temp;
-var loc;
-var icon;
-var humidity;
-var wind;
-var direction;
-var country;
-var i;
+var temp: any;
+var loc: any;
+var icon: any;
+var humidity: any;
+var wind:any;
+var direction: any;
+var country: any;
+var i: any;
 
 function update(weather) : void {
     humidity.innerHTML = weather.humidity;
