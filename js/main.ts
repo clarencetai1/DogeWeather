@@ -1,5 +1,5 @@
 var APPID = "846fd88591fcaf33ab0a8874cffa1a16";
-var temp;
+var temp : any;
 var loc;
 var icon;
 var humidity;
@@ -7,7 +7,7 @@ var wind;
 var direction;
 var country;
 
-function update(weather) {
+function update(weather) : void {
     humidity.innerHTML = weather.humidity;
     wind.innerHTML = weather.wind;
     direction.innerHTML = weather.direction;
@@ -31,7 +31,7 @@ window.onload = function () {
     }
 
 
-function updateByGeo(lat, lon){
+function updateByGeo(lat, lon) : void{
     var url = "http://api.openweathermap.org/data/2.5/weather?" +
 	"lat=" + lat +
 	"&lon=" + lon +
@@ -40,7 +40,7 @@ function updateByGeo(lat, lon){
 }
 
 
-function updateByZip(q){
+function updateByZip(q) : void{
     var url = "http://api.openweathermap.org/data/2.5/weather?" +
 	"q=" + q +
 	"&APPID=" + APPID;
@@ -48,12 +48,12 @@ function updateByZip(q){
 }
 
 
-function sendRequest(url){
+function sendRequest(url) : void{
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
 	if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             var data = JSON.parse(xmlhttp.responseText);
-	    var weather = {};
+	    var weather : any = {};
 	    weather.icon = data.weather[0].id;
 	    weather.humidity = data.main.humidity;
         weather.wind = data.wind.speed;
@@ -71,7 +71,7 @@ function sendRequest(url){
     xmlhttp.send();    
 }
 
-function degreesToDirection(degrees){
+function degreesToDirection(degrees) : string{
     var range = 360/16;
     var low = 360 - range/2;
     var high = (low + range) % 360;
@@ -89,6 +89,6 @@ function degreesToDirection(degrees){
     
 }
 
-function K2C(k){
+function K2C(k) : number{
     return Math.round(k - 273.15);
 }
